@@ -1,8 +1,9 @@
 ////////////////////
-/// C++ Object-oriented Programming
-/// Adventure Game 6
-/// Reference answer 
-/// anssi.grohn@pkamk.fi
+/// C++ Advanced
+/// Adventure Game
+/// Antti-Jussi Juppo
+/// anttijussi.juppo@edu.pkamk.fi
+////////////////////
 #ifndef __Dungeon_h__
 #define __Dungeon_h__
 #include "Room.h"
@@ -21,6 +22,8 @@ public:
   Dungeon()
   {
     SetDescription("You are locked up in a dungeon.");
+	//New addition under guidance of Ville
+	SetRoomID(3);
   }
   void Update()
   {

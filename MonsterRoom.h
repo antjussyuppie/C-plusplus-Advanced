@@ -1,8 +1,8 @@
 ////////////////////
-/// C++ Object-oriented Programming
-/// Adventure Game 6
-/// Reference answer 
-/// anssi.grohn@pkamk.fi
+/// C++ Advanced
+/// Adventure Game
+/// Antti-Jussi Juppo
+/// anttijussi.juppo@edu.pkamk.fi
 ////////////////////
 #ifndef __MonsterRoom_h__
 #define __MonsterRoom_h__
@@ -22,6 +22,8 @@ public:
     noticedPlayer = false;
     e.SetName( "Orc");
     SetDescription("You are in the monster room. There is an orc here!");
+	//New addition under Ville's guidance 
+	SetRoomID(1);
   }
   ////////////////////
   /// Makes enemy attack player once on every turn.
@@ -35,6 +37,9 @@ public:
       GetGame()->GetRenderer()->Render(s.str());
 
       e.Attack(&player);
+	  //Needed some help with this one as well.
+	  if(player.GetHitpoints() <= 0)
+	  {throw GameOverException("You died!\n");}
     }
     noticedPlayer = true;
   }

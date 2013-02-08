@@ -84,6 +84,7 @@
     <ClCompile Include="MoveCommand.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Room.cpp" />
+    <ClCompile Include="SaveCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AttackCommand.h" />
@@ -98,6 +99,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="QuitCommand.h" />
     <ClInclude Include="Room.h" />
+    <ClInclude Include="SaveCommand.h" />
     <ClInclude Include="SearchCommand.h" />
     <ClInclude Include="UnknownCommand.h" />
   </ItemGroup>

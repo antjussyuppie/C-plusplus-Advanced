@@ -1,8 +1,8 @@
 ////////////////////
-/// C++ Object-oriented Programming
-/// Adventure Game 6
-/// Reference answer 
-/// anssi.grohn@pkamk.fi
+/// C++ Advanced
+/// Adventure Game
+/// Antti-Jussi Juppo
+/// anttijussi.juppo@edu.pkamk.fi
 ////////////////////
 #include "CommandFactory.h"
 #include "QuitCommand.h"
@@ -10,6 +10,8 @@
 #include "AttackCommand.h"
 #include "UnknownCommand.h"
 #include "MoveCommand.h"
+//A new try
+#include "SaveCommand.h"
 #include "Game.h"
 #include <sstream>
 #include <string>
@@ -69,9 +71,16 @@ CommandFactory::Create( const std::string & str )
       command->SetDirection(West);
       return command;
     }
-
   }
-
-  return new UnknownCommand(m_pGame);  
+  
+  //Saving command starts here...
+  
+  if ( word == "save" )
+  {
+	return new SaveCommand(m_pGame);
+  }
+  
+  throw InvalidCommandException();
+  //return new UnknownCommand(m_pGame);  
 }
 ////////////////////////////////////////////////////////////////////////////////

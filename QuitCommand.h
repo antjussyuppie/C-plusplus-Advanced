@@ -1,8 +1,8 @@
 ////////////////////
-/// C++ Object-oriented Programming
-/// Adventure Game 6
-/// Reference answer 
-/// anssi.grohn@pkamk.fi
+/// C++ Advanced
+/// Adventure Game
+/// Antti-Jussi Juppo
+/// anttijussi.juppo@edu.pkamk.fi
 ////////////////////
 #ifndef __QuitCommand_h__
 #define __QuitCommand_h__

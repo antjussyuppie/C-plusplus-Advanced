@@ -1,8 +1,8 @@
 ////////////////////
-/// C++ Object-oriented Programming
-/// Adventure Game 6
-/// Reference answer 
-/// anssi.grohn@pkamk.fi
+/// C++ Advanced
+/// Adventure Game
+/// Antti-Jussi Juppo
+/// anttijussi.juppo@edu.pkamk.fi
 ////////////////////
 #ifndef __Game_h__
 #define __Game_h__
@@ -13,6 +13,8 @@ class Room;
 enum RoomId { kDungeon, kHallway, kMonster, kChambers, kNumRooms };
 #include "Player.h"
 #include "Enemy.h"
+
+#include <stdexcept>
 ////////////////////////////////////////////////////////////////////////////////
 class Game 
 {
@@ -33,6 +35,18 @@ public:
   Player & GetPlayer();
   Room * GetCurrentRoom();
   void SetCurrentRoom( Room *pRoom );
+  //At least I knew how to do these and why it had to be done.
+  //void SaveGame();
+  //int LoadGame();
 };
+
+//I needed some help with these
+struct GameOverException : public std::runtime_error
+{
+	//I definitely did not knew this one beforehand.
+	GameOverException(std::string error) : std::runtime_error(error.c_str()){}};
+
+struct InvalidCommandException : public std::runtime_error
+{InvalidCommandException() : std::runtime_error("Invalid input!\n") {}};
 ////////////////////////////////////////////////////////////////////////////////
 #endif

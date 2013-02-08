@@ -1,8 +1,8 @@
 ////////////////////
-/// C++ Object-oriented Programming
-/// Adventure Game 6
-/// Reference answer 
-/// anssi.grohn@pkamk.fi
+/// C++ Advanced
+/// Adventure Game
+/// Antti-Jussi Juppo
+/// anttijussi.juppo@edu.pkamk.fi
 ////////////////////
 #include "Player.h"
 #include "Game.h"
@@ -89,6 +89,43 @@ Player::AskInfo( Player & p)
   cout << "gender: "; cin >> g; p.gender = g == 'm' ? Male : Female;
   p.experience = 0;*/
   }
+  //I found this from Villes example
+  f.close();
+}
+
+//Description for GetWhereID and SetWhereID functions. Made these, thanks to Ville 
+int Player::GetWhereID()
+{
+	return WhereID;
+}
+void Player::SetWhereID(int id)
+{
+	WhereID = id;
+}
+
+//The way Ville suggested we do this part.
+void Player::LoadGame(Player &p)
+{
+	ifstream f("gamestatus.txt");
+  while ( !f.eof()  )
+  {
+    string line;
+    f >> line;
+    if ( line == "#player")
+    {
+      int iTmp;
+      string strTmp;
+      char g;
+      f >> strTmp; p.SetName(strTmp); 
+      f >> strTmp; p.SetRace(strTmp);
+      f >> iTmp; p.SetClass((Class)iTmp);
+      f >> iTmp; p.SetAge(iTmp);
+      f >> g; p.SetGender( (g == 'm' ? Male : Female) );
+      f >> iTmp; p.SetExperience(iTmp);
+      f >> iTmp; p.SetWhereID(iTmp);
+    }
+  }
+  f.close();
 }
 ////////////////////////////////////////////////////////////////////////////////
 void 

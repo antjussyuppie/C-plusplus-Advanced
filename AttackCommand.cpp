@@ -1,3 +1,9 @@
+////////////////////
+/// C++ Advanced
+/// Adventure Game
+/// Antti-Jussi Juppo
+/// anttijussi.juppo@edu.pkamk.fi
+////////////////////
 #include "AttackCommand.h"
 #include "Game.h"
 #include "Room.h"
