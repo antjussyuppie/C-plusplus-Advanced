@@ -1,17 +1,11 @@
-﻿Build started 4.2.2013 19:24:23.
+﻿Build started 16.2.2013 12:38:56.
      1>Project "C:\Users\x\Documents\Visual Studio 2010\Projects\AdventureGameC++Advanced\Engine\Engine.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Engine.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt GameObject.cpp Gold.cpp GoldFactory.cpp
-         GoldFactory.cpp
-         Gold.cpp
-         GameObject.cpp
-         Generating Code...
+         All outputs are up-to-date.
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\x\Documents\Visual Studio 2010\Projects\AdventureGameC++Advanced\Engine\Debug\Engine.lib" /NOLOGO Debug\GameObject.obj
-         Debug\Gold.obj
-         Debug\GoldFactory.obj
+         All outputs are up-to-date.
          Engine.vcxproj -> C:\Users\x\Documents\Visual Studio 2010\Projects\AdventureGameC++Advanced\Engine\Debug\Engine.lib
        FinalizeBuildStatus:
          Deleting file "Debug\Engine.unsuccessfulbuild".
@@ -20,4 +14,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.86
+Time Elapsed 00:00:00.04

@@ -14,6 +14,9 @@ class Game;
 ////////////////////////////////////////////////////////////////////////////////
 class SaveCommand : public Command
 {
+	//this was taken from Ville-Santeri Peltolas code
+	friend class CommandFactory;
+
 	public: SaveCommand(Game *pGame) : Command(pGame){}
 	void Execute();
 };

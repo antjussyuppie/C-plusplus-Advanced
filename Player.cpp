@@ -75,9 +75,7 @@ Player::AskInfo( Player & p)
       f >> iTmp; p.SetAge(iTmp);
       f >> g; p.SetGender( (g == 'm' ? Male : Female) );
       f >> iTmp; p.SetExperience(iTmp);
-      
     }
-
     /*
   cout << "\nPlease enter your details:\n\n";
   cout << "Your name:"; cin >> p.name;
@@ -123,6 +121,7 @@ void Player::LoadGame(Player &p)
       f >> g; p.SetGender( (g == 'm' ? Male : Female) );
       f >> iTmp; p.SetExperience(iTmp);
       f >> iTmp; p.SetWhereID(iTmp);
+//	  f >> iTmp; p.gold.SetAmount(iTmp);
     }
   }
   f.close();

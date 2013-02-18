@@ -81,6 +81,7 @@
     <ClCompile Include="AttackCommand.cpp" />
     <ClCompile Include="CommandFactory.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="InventoryCommand.cpp" />
     <ClCompile Include="MoveCommand.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Room.cpp" />
@@ -94,6 +95,7 @@
     <ClInclude Include="Dungeon.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Hallway.h" />
+    <ClInclude Include="InventoryCommand.h" />
     <ClInclude Include="MonsterRoom.h" />
     <ClInclude Include="MoveCommand.h" />
     <ClInclude Include="Player.h" />

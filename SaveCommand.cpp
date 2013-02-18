@@ -29,6 +29,8 @@ void SaveCommand::Execute()
 	savefile << GetGame()->GetPlayer().GetGender() << "\r\n";
 	savefile << GetGame()->GetPlayer().GetExperience() << "\r\n";
 	savefile << GetGame()->GetCurrentRoom()->GetRoomID();
+//	savefile << GetGame()->GetPlayer().gold.GetAmount();
+	//savefile << gold.GetCountAmount() << "\r\n";
 	}
 	savefile.close();
 	GetGame()->GetRenderer()->Render("Your game is saved. \n");

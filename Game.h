@@ -13,6 +13,8 @@ class Room;
 enum RoomId { kDungeon, kHallway, kMonster, kChambers, kNumRooms };
 #include "Player.h"
 #include "Enemy.h"
+//This code was taken from Taneli Peltolas group
+#include "Gold.h"
 
 #include <stdexcept>
 ////////////////////////////////////////////////////////////////////////////////
@@ -24,6 +26,8 @@ private:
   IRenderer *renderer;
   Room      *rooms[kNumRooms]; ///< Map.
   Room      *currentRoom;
+  //This code was taken from Taneli Peltolas group
+  //Gold gold;
 public:
   Game();
   virtual ~Game();
@@ -38,6 +42,9 @@ public:
   //At least I knew how to do these and why it had to be done.
   //void SaveGame();
   //int LoadGame();
+
+  //This code was taken from Taneli Peltolas group
+  //Gold & GetGold();
 };
 
 //I needed some help with these

@@ -23,8 +23,8 @@
 #include "globals.h"
 ////////////////////////////////////////////////////////////////////////////////
 using namespace std;
-#define DEV_NAME "anssi.grohn@pkamk.fi"
-#define YEAR 2011
+#define DEV_NAME "anttijussi.juppo@karelia-amk"
+#define YEAR 2013
 
 ////////////////////////////////////////////////////////////////////////////////
 Game::Game() : running(true)
@@ -55,7 +55,8 @@ Game::Game() : running(true)
   
   currentRoom = rooms[kDungeon];
 
-
+  //This code was taken from Taneli Peltolas group
+  //gold.ZeroCountAmount(0);
 
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -243,6 +244,13 @@ Game::SetCurrentRoom( Room *pRoom )
   currentRoom = pRoom;
 }
 ////////////////////////////////////////////////////////////////////////////////
+//This code was taken from Taneli Peltolas group
+/*
+Gold & Game::GetGold()
+{  
+	return gold;
+}*/
+
 //I made these out of some examples
 /*
 void Game::SaveGame()

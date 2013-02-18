@@ -15,6 +15,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 class SearchCommand : public Command
 {
+	//Inpired by Ville-Santeri Peltola
+	friend class CommandFactory;
 public:
   SearchCommand( Game *pGame ) : Command(pGame) {}
   void Execute()
@@ -22,10 +24,18 @@ public:
     if ( rand()%1000 < 436 )
     {
       GoldFactory f;
+	  //inspired by Ville-Santeri
+	  //int ngold;
       Gold *g = f.Create( 1+rand()%100 );
       std::ostringstream s;
       s << "You found " << g->GetAmount() << " gold!\n";
+
+	  //Here are additions from Taneli Peltolas example.
+	  //GetGame()->GetGold() += g;
+	  //s << "You now have " << GetGame()->GetGold().GetCountAmount() << " pieces of gold!\n";
+
       GetGame()->GetRenderer()->Render(s.str());
+	  //GetGame()->GetPlayer().gold+=g;
       delete g;
     }
     else {
