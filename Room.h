@@ -10,6 +10,8 @@
 #include <string>
 #include "Updateable.h"
 #include "globals.h"
+//Adding a vector
+//#include <vector>
 ////////////////////////////////////////////////////////////////////////////////
 class MoveCommand;
 class AttackCommand;
@@ -23,6 +25,8 @@ private:
   Game *        game;
   //Something new
   int ID;
+  //Adding a vector
+  //vector<Room *> rooms;
 public:
 
   Room();

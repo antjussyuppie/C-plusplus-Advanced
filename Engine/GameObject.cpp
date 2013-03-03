@@ -7,7 +7,8 @@
 #include "GameObject.h"
 #include <cstdlib>
 #include <iostream>
-#include "Enemy.h"
+//Module 5 change
+//#include "Enemy.h"
 using namespace std;
 ////////////////////////////////////////////////////////////////////////////////
 GameObject::GameObject()

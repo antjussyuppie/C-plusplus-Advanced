@@ -23,6 +23,7 @@
     <ClInclude Include="Updateable.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Gold.cpp" />
     <ClCompile Include="GoldFactory.cpp" />

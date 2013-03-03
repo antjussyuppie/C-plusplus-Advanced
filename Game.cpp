@@ -21,6 +21,11 @@
 #include "MonsterRoom.h"
 #include "Chambers.h"
 #include "globals.h"
+
+//Module 5 modifications
+//#include "Enemy.h"
+//#include <ctime>
+//#include <string>
 ////////////////////////////////////////////////////////////////////////////////
 using namespace std;
 #define DEV_NAME "anttijussi.juppo@karelia-amk"
@@ -58,6 +63,20 @@ Game::Game() : running(true)
   //This code was taken from Taneli Peltolas group
   //gold.ZeroCountAmount(0);
 
+  //Module 5 mods
+  /*eGuard = new Enemy();  
+  eGuard->SetGame(this);  
+  eGuard->SetName("Orc Warlord");  
+  eGuard->CanMove=false;  
+  eGuard->SetRoom(rooms[kMonster]);  
+  s->GetUpdateables().push_back(eGuard);  
+  e.push_back(eGuard);  
+  ePatrol = new Enemy();  
+  ePatrol->SetGame(this);  
+  ePatrol->SetName("Bloody Rogue");  
+  ePatrol->SetRoom(rooms[kMonster]);  
+  s->GetUpdateables().push_back(ePatrol);  
+  e.push_back(ePatrol);*/
 }
 ////////////////////////////////////////////////////////////////////////////////
 Game::~Game()
@@ -244,6 +263,22 @@ Game::SetCurrentRoom( Room *pRoom )
   currentRoom = pRoom;
 }
 ////////////////////////////////////////////////////////////////////////////////
+//Module 5 mods
+/*IRenderer & Game::GetR() const
+{	
+	return r;
+}
+////////
+void Game::Update()
+{	
+	s->Update();
+}
+////////
+Enemy *Game::GetEnemy()
+{	
+	return eGuard;
+}*/
+
 //This code was taken from Taneli Peltolas group
 /*
 Gold & Game::GetGold()

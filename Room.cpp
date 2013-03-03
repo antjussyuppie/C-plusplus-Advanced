@@ -9,6 +9,8 @@
 #include "Game.h"
 #include "IRenderer.h"
 #include <cstdlib>
+//Adding vector
+//#include <vector>
 ////////////////////////////////////////////////////////////////////////////////
 Room::Room()
 {

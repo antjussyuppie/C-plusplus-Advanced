@@ -9,14 +9,21 @@
 ////////////////////////////////////////////////////////////////////////////////
 class IRenderer;
 class Room;
+//Module 5 mod
+//class Enemy;
 ////////////////////////////////////////////////////////////////////////////////
 enum RoomId { kDungeon, kHallway, kMonster, kChambers, kNumRooms };
 #include "Player.h"
 #include "Enemy.h"
 //This code was taken from Taneli Peltolas group
 #include "Gold.h"
-
 #include <stdexcept>
+////////////////////////////////////////////////////////////////////////////////
+//Module 5 modifications
+//#include <list>
+//#include <vector>
+//typedef vector<Enemy*> Enemies;
+//class Scene;
 ////////////////////////////////////////////////////////////////////////////////
 class Game 
 {
@@ -28,6 +35,12 @@ private:
   Room      *currentRoom;
   //This code was taken from Taneli Peltolas group
   //Gold gold;
+  //Module 5 mods
+  /*Enemies e;  
+  Enemy *eGuard;  
+  Enemy *ePatrol;
+  Scene *s;
+  IRenderer & r;*/
 public:
   Game();
   virtual ~Game();
@@ -45,6 +58,12 @@ public:
 
   //This code was taken from Taneli Peltolas group
   //Gold & GetGold();
+
+  //Module 5 mods
+  /*Enemies& GetEnemies(){return e;}
+  void Update();
+  IRenderer & GetR() const;
+  Enemy * GetEnemy();*/
 };
 
 //I needed some help with these

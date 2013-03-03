@@ -22,7 +22,10 @@ private:
   int WhereID;
   //Inspired by Ville-Santeri
   //Something's strange here...
-  //Gold gold;
+  //...not anymore
+  Gold gold;
+  //I have no idea if this is needed or not
+  string roomdesc;
 
 public:
   Player();
@@ -37,6 +40,10 @@ public:
   static void LoadGame(Player &p);
   int GetWhereID();
   void SetWhereID(int id);
+
+  //Module 5 modifications
+  //void SetDesc(string s);  
+  //string GetDesc();
 };
 ////////////////////////////////////////////////////////////////////////////////
 #endif

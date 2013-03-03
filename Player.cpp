@@ -121,7 +121,7 @@ void Player::LoadGame(Player &p)
       f >> g; p.SetGender( (g == 'm' ? Male : Female) );
       f >> iTmp; p.SetExperience(iTmp);
       f >> iTmp; p.SetWhereID(iTmp);
-//	  f >> iTmp; p.gold.SetAmount(iTmp);
+	  f >> iTmp; p.gold.SetAmount(iTmp);
     }
   }
   f.close();
@@ -133,3 +133,13 @@ Player::SetGame( Game * game )
   this->game = game;
 }
 ////////////////////////////////////////////////////////////////////////////////
+//These are supposedly modifications for Module 5!
+/*void Player::SetDesc(string s)
+{	
+	roomdesc = s;
+}
+//////////////////////////////////////////////////////
+string Player::GetDesc()
+{	
+	return roomdesc;
+}*/

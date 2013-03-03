@@ -12,6 +12,8 @@
 #include "Game.h"
 #include <sstream>
 #include "IRenderer.h"
+//My new personal addition
+#include "SizeCounter.h"
 ////////////////////////////////////////////////////////////////////////////////
 class SearchCommand : public Command
 {
@@ -33,10 +35,15 @@ public:
 	  //Here are additions from Taneli Peltolas example.
 	  //GetGame()->GetGold() += g;
 	  //s << "You now have " << GetGame()->GetGold().GetCountAmount() << " pieces of gold!\n";
-
-      GetGame()->GetRenderer()->Render(s.str());
-	  //GetGame()->GetPlayer().gold+=g;
+	  //Little adjustments under guidance by Ville-Santeri Peltola
+	  GetGame()->GetPlayer().gold+=g;
+	  s << "You now have " << GetGame()->GetPlayer().gold.GetAmount() << " pieces of gold!\n";
+	  GetGame()->GetRenderer()->Render(s.str());
       delete g;
+	  //I try my newest addition over here
+	  //const int MAX_ITEMS = GetGame()->GetPlayer().gold.GetAmount();
+	  //SizeCounter<char, MAX_ITEMS> mgr;
+	  //cout << "size of mgr is : " << mgr.GetSize() << endl;
     }
     else {
       GetGame()->GetRenderer()->Render( "You found nothing.\n");

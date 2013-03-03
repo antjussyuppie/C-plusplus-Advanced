@@ -11,6 +11,9 @@
 class Game;
 #include "Dungeon.h"
 #include <sstream>
+//This additions are taken from Ville-Santeri Peltola for Module 5
+//#include "Scene.h"
+//#include <list>
 ////////////////////////////////////////////////////////////////////////////////
 class AttackCommand  : public Command
 {

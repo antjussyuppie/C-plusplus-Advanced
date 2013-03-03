@@ -10,25 +10,33 @@
 #include "Enemy.h"
 #include <sstream>
 #include "MoveCommand.h"
+//Module 5 mods
+//#include <vector>
+//#include "Scene.h"
 ////////////////////////////////////////////////////////////////////////////////
 class MonsterRoom : public Room
 {
 private:
   Enemy e;
   bool noticedPlayer;
+  //Module 5 modifications
+  //bool noticedPlayer;  
+  //int ID;
 public:
   MonsterRoom()
   {
+	  //Module 5 modifications
     noticedPlayer = false;
     e.SetName( "Orc");
-    SetDescription("You are in the monster room. There is an orc here!");
+    SetDescription("You are in the monster room. There is an orc here!");//...to have this one
 	//New addition under Ville's guidance 
-	SetRoomID(1);
+	SetRoomID(1);//...and this one on.
   }
   ////////////////////
   /// Makes enemy attack player once on every turn.
   void Update()
   {
+	  //Module 5 modifications
     if ( e.IsAlive() && noticedPlayer )
     {
       std::ostringstream s;
@@ -47,6 +55,9 @@ public:
   /// Restricts movement until enemy is killed.
   /// \param pCommand Move command.
   /// \return Room pointer to next available room, NULL if none available.
+
+  //EVEN MORE MODULE 5 MODIFICATIONS
+  
   Room * OnMoveCommand( MoveCommand *pCommand )
   {
     if ( e.IsAlive())

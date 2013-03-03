@@ -11,6 +11,14 @@
 #include <cstdlib>
 const int ENEMY_DEFAULT_HITPOINTS = 3;
 
+//New additions for Module 5 according to Ville-Santeri Peltola
+//#include "Game.h"
+//#include "Room.h"
+//#include "Player.h"
+//#include "globals.h"
+//#include <vector>
+//#include "IRenderer.h"
+
 using namespace std;
 
 class Enemy : public GameObject
@@ -37,6 +45,30 @@ public:
     else
       cout << GetName() << " misses!\n";
   }
+
+  //Module 5 modifications
+  /*friend class AttackCommand;
+  friend class Game;
+protected:  
+  
+  bool CanAct;  
+  bool Inactive;  
+  Game *m_pGame;  
+  Room * mRoom;  
+  bool Aggro;  
+  bool CanMove;  
+
+  public:  
+	Enemy();  ~Enemy();  
+	bool IsAlive();    
+	void Attack( GameObject *pObject ); 
+	void Update();
+	void CheckRoom();
+	Room* GetRoom();
+	void SetRoom(Room* MRoom);
+	void Move(Direction direction);
+	void SetGame( Game * pGame );
+	Game * GetGame();*/
 };
 
 #endif

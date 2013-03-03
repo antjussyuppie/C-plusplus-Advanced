@@ -16,6 +16,8 @@
 #include <sstream>
 #include <string>
 #include <iostream>
+
+//#include "globals.h"
 ////////////////////////////////////////////////////////////////////////////////
 using namespace std;
 ////////////////////////////////////////////////////////////////////////////////
@@ -80,7 +82,47 @@ CommandFactory::Create( const std::string & str )
 	return new SaveCommand(m_pGame);
   }
   
-  throw InvalidCommandException();
-  //return new UnknownCommand(m_pGame);  
+  //throw InvalidCommandException();
+  return new UnknownCommand(m_pGame);  
 }
 ////////////////////////////////////////////////////////////////////////////////
+/*CommandFactory::CommandFactory( Game *pGame ) : m_pGame(pGame)
+{	
+	newMap.insert(pair<string,ICommand*>("quit", new QuitCommand(m_pGame)));	
+	newMap.insert(pair<string,ICommand*>("search", new SearchCommand(m_pGame)));	
+	newMap.insert(pair<string,ICommand*>("attack", new AttackCommand(m_pGame)));	
+	newMap.insert(pair<string,ICommand*>("save", new SaveCommand(m_pGame)));	
+	
+	MoveCommand *command = new MoveCommand(m_pGame);    
+	command->SetDirection(North);	
+	newMap.insert(pair<string,ICommand*>("move north", command));	
+
+	command = new MoveCommand(m_pGame);    
+	command->SetDirection(South);	
+	newMap.insert(pair<string,ICommand*>("move south", command));
+
+	command = new MoveCommand(m_pGame);    
+	command->SetDirection(East);	
+	newMap.insert(pair<string,ICommand*>("move east", command));
+
+	command = new MoveCommand(m_pGame);    
+	command->SetDirection(West);	
+	newMap.insert(pair<string,ICommand*>("move west", command));
+}
+
+CommandFactory::~CommandFactory()
+{	
+	for(auto& it : newMap)	
+	{		
+		if (it.second) delete it.second;	
+	}	
+	newMap.clear();
+}
+
+ICommand * 
+CommandFactory::Create( const std::string & str )
+{  
+	map<string,ICommand*>::iterator it = newMap.find(str);  
+	if(it != newMap.end()) return it->second;    
+	throw InvalidCommandException();
+}*/
