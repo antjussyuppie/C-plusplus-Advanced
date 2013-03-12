@@ -20,8 +20,8 @@ enum RoomId { kDungeon, kHallway, kMonster, kChambers, kNumRooms };
 #include <stdexcept>
 ////////////////////////////////////////////////////////////////////////////////
 //Module 5 modifications
-//#include <list>
-//#include <vector>
+#include <list>
+#include <vector>
 //typedef vector<Enemy*> Enemies;
 //class Scene;
 ////////////////////////////////////////////////////////////////////////////////
@@ -64,6 +64,22 @@ public:
   void Update();
   IRenderer & GetR() const;
   Enemy * GetEnemy();*/
+
+  //For Module 6
+  struct vectorSum	
+  {		//There needs to be 't' v right there
+	  vectorSum(int * t) :total(t){};		
+	  int * total;		
+	  void operator()(int element)		
+	  {			
+		  *total += element;		
+	  }	
+  };	
+  vector<int> goldTotal;	
+  //vector<int>::iterator it;	
+  //int currentGold;
+  void SetCurrentGold(int gold);	
+  int GetCurrentGold();
 };
 
 //I needed some help with these

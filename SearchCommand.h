@@ -29,6 +29,11 @@ public:
 	  //inspired by Ville-Santeri
 	  //int ngold;
       Gold *g = f.Create( 1+rand()%100 );
+	  
+	  //Something little for Module 6
+	  int gg = g->GetAmount();      
+	  GetGame()->SetCurrentGold(g->GetAmount());
+
       std::ostringstream s;
       s << "You found " << g->GetAmount() << " gold!\n";
 
@@ -39,6 +44,11 @@ public:
 	  GetGame()->GetPlayer().gold+=g;
 	  s << "You now have " << GetGame()->GetPlayer().gold.GetAmount() << " pieces of gold!\n";
 	  GetGame()->GetRenderer()->Render(s.str());
+
+	  //Something more little for Module 6
+	  if (GetGame()->GetCurrentGold() > 0 && GetGame()->GetCurrentGold() != gg)  		
+		  cout << "You now have " << GetGame()->GetCurrentGold()<< " gold!\n";
+
       delete g;
 	  //I try my newest addition over here
 	  //const int MAX_ITEMS = GetGame()->GetPlayer().gold.GetAmount();

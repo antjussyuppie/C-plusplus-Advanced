@@ -26,6 +26,10 @@
 //#include "Enemy.h"
 //#include <ctime>
 //#include <string>
+
+//Module 6 modifications
+//#include <list>
+#include <algorithm>
 ////////////////////////////////////////////////////////////////////////////////
 using namespace std;
 #define DEV_NAME "anttijussi.juppo@karelia-amk"
@@ -34,6 +38,9 @@ using namespace std;
 ////////////////////////////////////////////////////////////////////////////////
 Game::Game() : running(true)
 {
+	//Module 6 modification
+//	currentGold = 0;
+
   renderer = new TextRenderer();
 
   rooms[kDungeon] = new Dungeon();
@@ -263,6 +270,18 @@ Game::SetCurrentRoom( Room *pRoom )
   currentRoom = pRoom;
 }
 ////////////////////////////////////////////////////////////////////////////////
+void Game::SetCurrentGold(int gold)
+{	
+	goldTotal.push_back(gold);
+}
+////////////////////////////////////////////////////////////////////////////////
+int Game::GetCurrentGold()
+{
+	int total = 0;	
+	vectorSum sum(&total);	
+	for_each(goldTotal.begin(), goldTotal.end(), sum);
+	return total;
+}
 //Module 5 mods
 /*IRenderer & Game::GetR() const
 {	
